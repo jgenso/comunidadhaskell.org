@@ -1,0 +1,24 @@
+Default: &defaults
+  user: comunidadhaskell
+  password: comunidadhaskell
+  host: localhost
+  port: 27017
+  database: comunidadhaskell
+  poolsize: 10
+
+Development:
+  <<: *defaults
+
+Testing:
+  database: comunidadhaskell_test
+  <<: *defaults
+
+Staging:
+  database: comunidadhaskell_staging
+  poolsize: 100
+  <<: *defaults
+
+Production:
+  database: comunidadhaskell_production
+  poolsize: 100
+  <<: *defaults
